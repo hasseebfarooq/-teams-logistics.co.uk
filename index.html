@@ -549,6 +549,139 @@
             font-size: 1.15rem;
         }
 
+        /* RESPONSIVE SERVICES SECTION */
+        @media (max-width: 1200px) {
+            .service-content {
+                padding: 30px;
+            }
+
+            .service-content h3 {
+                font-size: 1.6rem;
+            }
+
+            .service-content p {
+                font-size: 1.05rem;
+            }
+
+            .service-icon {
+                font-size: 48px;
+            }
+
+            .service-img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .services {
+                padding: 100px 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 40px;
+            }
+
+            .service-content {
+                padding: 25px;
+            }
+
+            .service-img {
+                height: 220px;
+            }
+
+            .service-icon {
+                font-size: 45px;
+                margin-bottom: 20px;
+            }
+
+            .service-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services {
+                padding: 80px 15px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .service-img {
+                height: 200px;
+            }
+
+            .service-content {
+                padding: 20px;
+            }
+
+            .service-icon {
+                font-size: 42px;
+            }
+
+            .service-content h3 {
+                font-size: 1.4rem;
+            }
+
+            .service-content p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-img {
+                height: 180px;
+            }
+
+            .service-icon {
+                font-size: 38px;
+                margin-bottom: 15px;
+            }
+
+            .service-content h3 {
+                font-size: 1.25rem;
+                margin-bottom: 15px;
+            }
+
+            .service-content p {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+
+            .services-grid {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .services {
+                padding: 60px 10px;
+            }
+
+            .service-content {
+                padding: 18px;
+            }
+
+            .service-icon {
+                font-size: 32px;
+            }
+
+            .service-content h3 {
+                font-size: 1.15rem;
+            }
+
+            .service-content p {
+                font-size: 0.85rem;
+            }
+        }
+
         /* Stats Section */
         .stats {
             padding: 120px 0;
@@ -683,6 +816,40 @@
             color: var(--gray);
             font-size: 1.1rem;
         }
+
+        @media (max-width: 768px) {
+            .industries-container {
+                padding: 20px 10px;
+                overflow-x: auto;
+            }
+
+            .industries-grid {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                padding: 20px 10px;
+                overflow-x: auto;
+            }
+
+            .industry-card {
+                min-width: 250px;
+                padding: 30px 20px;
+            }
+
+            .industry-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .industry-card p {
+                font-size: 1rem;
+            }
+
+            .industry-icon {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+        }
+
 
         /* Testimonials Section */
         .testimonials {
@@ -1031,6 +1198,92 @@
             height: 100%;
             border: none;
         }
+
+        /* ==== Responsive ==== */
+        @media (max-width: 992px) {
+            .contact-container {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .contact-form,
+            .contact-info {
+                width: 100%;
+            }
+
+            .contact-form {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact {
+                padding: 100px 0;
+            }
+
+            .contact-form {
+                padding: 30px 25px;
+            }
+
+            .contact-info {
+                gap: 25px;
+            }
+
+            .contact-map {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact {
+                padding: 80px 0;
+            }
+
+            .contact-form {
+                padding: 25px 20px;
+            }
+
+            .contact-card {
+                padding: 25px 20px;
+            }
+
+            .contact-detail {
+                align-items: flex-start;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .contact-icon {
+                margin-top: 5px;
+                font-size: 20px;
+            }
+
+            .contact-text {
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                padding: 12px 28px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .contact-detail {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+
+            .contact-text {
+                font-size: 0.9rem;
+            }
+        }
+
 
         footer {
             background: var(--primary);
@@ -1819,7 +2072,7 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Stats Section 
     <section class="stats">
         <div class="container">
             <div class="stats-container">
@@ -1843,7 +2096,7 @@
         </div>
     </section>
 
-    <!-- Parallax Section -->
+    /////////////// Parallax Section -->
     <section class="parallax"
         style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
         <div class="container" style="color: #000000;">
@@ -1899,9 +2152,172 @@
                 </div>
             </div>
         </div>
+        <script>
+            // Auto-scrolling for industries section
+            document.addEventListener('DOMContentLoaded', function () {
+                const container = document.querySelector('.industries-container');
+                const grid = document.querySelector('.industries-grid');
+                let scrollSpeed = 1; // Adjust speed as needed (lower = slower)
+                let isPaused = false;
+                let scrollInterval;
+
+                // Start auto-scroll
+                function startAutoScroll() {
+                    scrollInterval = setInterval(function () {
+                        if (!isPaused) {
+                            // Check if we've reached the end (with 5px buffer)
+                            if (container.scrollLeft + container.clientWidth >= grid.scrollWidth - 5) {
+                                // Smoothly scroll back to start
+                                container.scrollTo({
+                                    left: 0,
+                                    behavior: 'smooth'
+                                });
+                                // Small delay before restarting scroll
+                                setTimeout(() => {
+                                    container.scrollLeft += scrollSpeed;
+                                }, 1000);
+                            } else {
+                                // Normal scrolling
+                                container.scrollLeft += scrollSpeed;
+                            }
+                        }
+                    }, 30); // Adjust timing for smoother/faster scrolling
+                }
+
+                // Initialize auto-scroll
+                startAutoScroll();
+
+                // Pause on hover/touch
+                container.addEventListener('mouseenter', () => isPaused = true);
+                container.addEventListener('mouseleave', () => isPaused = false);
+
+                // Touch events for mobile
+                container.addEventListener('touchstart', () => isPaused = true);
+                container.addEventListener('touchend', () => isPaused = false);
+
+                // Reset on window focus/blur
+                window.addEventListener('blur', () => {
+                    isPaused = true;
+                    clearInterval(scrollInterval);
+                });
+                window.addEventListener('focus', () => {
+                    isPaused = false;
+                    clearInterval(scrollInterval);
+                    startAutoScroll();
+                });
+            });
+        </script>
+        <script>
+            // Enhanced Auto-scrolling with Mobile Support
+            document.addEventListener('DOMContentLoaded', function () {
+                const container = document.querySelector('.industries-container');
+                const grid = document.querySelector('.industries-grid');
+                let scrollSpeed = 0.8; // Slower speed for better mobile experience
+                let isInteracting = false;
+                let scrollInterval;
+                let requestId;
+                let isScrollingBack = false;
+
+                // Smooth scroll function using requestAnimationFrame
+                function smoothScroll() {
+                    if (isInteracting || isScrollingBack) {
+                        requestId = null;
+                        return;
+                    }
+
+                    // Check if we've reached the end (with 2px buffer)
+                    if (container.scrollLeft + container.clientWidth >= grid.scrollWidth - 2) {
+                        scrollToStart();
+                    } else {
+                        container.scrollLeft += scrollSpeed;
+                    }
+
+                    requestId = requestAnimationFrame(smoothScroll);
+                }
+
+                // Smooth scroll back to start
+                function scrollToStart() {
+                    isScrollingBack = true;
+                    const start = container.scrollLeft;
+                    const change = -start;
+                    const duration = 1000;
+                    const startTime = performance.now();
+
+                    function animateScroll(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        container.scrollLeft = start + change * progress;
+
+                        if (progress < 1) {
+                            requestAnimationFrame(animateScroll);
+                        } else {
+                            isScrollingBack = false;
+                            requestId = requestAnimationFrame(smoothScroll);
+                        }
+                    }
+
+                    requestAnimationFrame(animateScroll);
+                }
+
+                // Start auto-scroll
+                function startAutoScroll() {
+                    if (!requestId) {
+                        requestId = requestAnimationFrame(smoothScroll);
+                    }
+                }
+
+                // Stop auto-scroll
+                function stopAutoScroll() {
+                    if (requestId) {
+                        cancelAnimationFrame(requestId);
+                        requestId = null;
+                    }
+                }
+
+                // Initialize
+                startAutoScroll();
+
+                // Pause on interaction
+                container.addEventListener('mouseenter', () => {
+                    isInteracting = true;
+                    stopAutoScroll();
+                });
+                container.addEventListener('mouseleave', () => {
+                    isInteracting = false;
+                    startAutoScroll();
+                });
+
+                // Touch events for mobile
+                container.addEventListener('touchstart', () => {
+                    isInteracting = true;
+                    stopAutoScroll();
+                }, { passive: true });
+
+                container.addEventListener('touchend', () => {
+                    isInteracting = false;
+                    startAutoScroll();
+                }, { passive: true });
+
+                // Handle visibility changes
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        stopAutoScroll();
+                    } else {
+                        startAutoScroll();
+                    }
+                });
+
+                // Handle page load/resize
+                window.addEventListener('load', startAutoScroll);
+                window.addEventListener('resize', () => {
+                    stopAutoScroll();
+                    startAutoScroll();
+                });
+            });
+        </script>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section 
     <section class="testimonials">
         <div class="container">
             <div class="section-title">
@@ -1975,7 +2391,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -2004,6 +2420,295 @@
                         <button type="submit" class="btn">Submit Request</button>
                     </form>
                 </div>
+
+
+                <!-- Contact Preference Modal -->
+                <div id="contactModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h3>How would you like us to contact you?</h3>
+                        <div class="contact-options">
+                            <a href=" https://wa.me/44 7448 292733" target="_blank" class="contact-option">WhatsApp</a>
+                            <a href="https://instagram.com/yourprofile" target="_blank"
+                                class="contact-option">Instagram</a>
+                            <a href="https://facebook.com" target="_blank" class="contact-option">Facebook</a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@teamslogistics.co.uk"
+                                target="_blank" class="contact-option">Email</a>
+
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .modal {
+                        display: none;
+                        position: fixed;
+                        z-index: 9999;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .modal-content {
+                        background-color: #010000;
+                        padding: 30px;
+                        border-radius: 12px;
+                        max-width: 400px;
+                        text-align: center;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+
+                    .contact-options {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        margin-top: 20px;
+                    }
+
+                    .contact-option {
+                        background-color: #ffc107;
+                        color: #000;
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        border-radius: 8px;
+                        font-weight: bold;
+                        transition: 0.3s;
+                    }
+
+                    .contact-option:hover {
+                        background-color: #e0a800;
+                    }
+
+                    .close-btn {
+                        float: right;
+                        font-size: 24px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: scale(0.9);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                    }
+
+
+                    /* New Mobile Optimizations */
+                    @media (max-width: 992px) {
+                        .contact-container {
+                            flex-direction: column;
+                            gap: 40px;
+                        }
+
+                        .contact-form,
+                        .contact-info {
+                            width: 100%;
+                        }
+
+                        .contact-form {
+                            padding: 40px 30px;
+                        }
+
+                        .contact-card {
+                            padding: 30px;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .contact {
+                            padding: 80px 0;
+                        }
+
+                        .form-title {
+                            font-size: 1.8rem;
+                        }
+
+                        .contact-form {
+                            padding: 30px 25px;
+                        }
+
+                        .contact-info {
+                            gap: 30px;
+                        }
+
+                        .contact-map {
+                            height: 280px;
+                        }
+                    }
+
+                    @media (max-width: 576px) {
+                        .contact {
+                            padding: 60px 0;
+                        }
+
+                        .contact-form {
+                            padding: 25px 20px;
+                        }
+
+                        .contact-card {
+                            padding: 25px 20px;
+                        }
+
+                        .contact-detail {
+                            align-items: flex-start;
+                            flex-direction: row;
+                        }
+
+                        .contact-icon {
+                            margin-top: 5px;
+                            margin-right: 15px;
+                            font-size: 20px;
+                        }
+
+                        .contact-text {
+                            font-size: 0.95rem;
+                        }
+
+                        .btn {
+                            padding: 14px 30px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    @media (max-width: 400px) {
+                        .contact-detail {
+                            flex-direction: column;
+                            gap: 5px;
+                        }
+
+                        .contact-icon {
+                            margin-right: 0;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    /* Responsive Layouts */
+                    @media (min-width: 768px) {
+                        .contact-container {
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                        }
+
+                        .contact-info,
+                        .contact-form {
+                            flex: 1 1 45%;
+                        }
+
+                        .contact-map {
+                            flex: 1 1 100%;
+                        }
+                    }
+
+                    /* Tablet */
+                    @media (max-width: 992px) {
+                        .contact-container {
+                            flex-direction: column;
+                            gap: 40px;
+                        }
+
+                        .contact-form,
+                        .contact-info {
+                            width: 100%;
+                        }
+
+                        .contact-form {
+                            padding: 40px 30px;
+                        }
+                    }
+
+                    /* Mobile */
+                    @media (max-width: 768px) {
+                        .contact-section {
+                            padding: 60px 15px;
+                        }
+
+                        .contact-form,
+                        .contact-info {
+                            padding: 30px 20px;
+                        }
+
+                        .contact-form h3,
+                        .contact-info h3 {
+                            font-size: 20px;
+                        }
+
+                        .contact-map iframe {
+                            height: 260px;
+                        }
+
+                        .contact-form button {
+                            font-size: 15px;
+                        }
+                    }
+
+                    /* Extra Small Devices */
+                    @media (max-width: 576px) {
+
+                        .contact-form,
+                        .contact-info {
+                            padding: 25px 15px;
+                        }
+
+                        .contact-form input,
+                        .contact-form textarea {
+                            font-size: 14px;
+                        }
+
+                        .contact-form button {
+                            padding: 12px 25px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    /* Tiny Screens */
+                    @media (max-width: 400px) {
+                        .social-icons {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                        }
+
+                        .social-icons img {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                </style>
+                <script>
+                    document.getElementById("quoteForm").addEventListener("submit", function (e) {
+                        e.preventDefault(); // Stop form from submitting
+
+                        const name = document.getElementById("name").value.trim();
+                        const email = document.getElementById("email").value.trim();
+                        const message = document.getElementById("message").value.trim();
+
+                        if (name && email && message) {
+                            document.getElementById("contactModal").style.display = "flex";
+                        } else {
+                            alert("Please fill out all fields before submitting.");
+                        }
+                    });
+
+                    document.querySelector(".close-btn").addEventListener("click", function () {
+                        document.getElementById("contactModal").style.display = "none";
+                    });
+
+                    window.addEventListener("click", function (e) {
+                        if (e.target === document.getElementById("contactModal")) {
+                            document.getElementById("contactModal").style.display = "none";
+                        }
+                    });
+                </script>
+
                 <div class="contact-info">
                     <div class="contact-card">
                         <h3>Contact Information</h3>
@@ -2011,7 +2716,7 @@
                             <i class="fas fa-map-marker-alt contact-icon"></i>
                             <div class="contact-text">
                                 76 Heather Lane,West Drayton,United Kingdom,UB7 8AR
-                                
+
                             </div>
                         </div>
                         <div class="contact-detail">
@@ -2029,8 +2734,9 @@
                         <div class="contact-detail">
                             <i class="fas fa-envelope contact-icon"></i>
                             <div class="contact-text">
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@teamslogistics.co.uk">info@teamslogistics.co.uk</a>
-                              
+                                <a
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@teamslogistics.co.uk">info@teamslogistics.co.uk</a>
+
                             </div>
                         </div>
                         <div class="contact-detail">
@@ -2050,6 +2756,8 @@
                 </div>
             </div>
         </div>
+
+
     </section>
 
     <!-- Footer -->
