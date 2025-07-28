@@ -258,12 +258,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            font-weight: 500;
-            color: var(--gray);
-        }
+
 
         .hero-btns {
             display: flex;
@@ -547,7 +542,7 @@
         }
 
         .service-content p {
-            color: var(--gray);
+            color: #fff;
             margin-bottom: 30px;
             font-size: 1.15rem;
         }
@@ -816,7 +811,7 @@
         }
 
         .industry-card p {
-            color: var(--gray);
+            color: #fff;
             font-size: 1.1rem;
         }
 
@@ -1447,41 +1442,7 @@
             transform: rotate(45deg);
         }
 
-        .newsletter-form {
-            display: flex;
-            margin-top: 30px;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 15px 20px;
-            border: none;
-            border-radius: var(--radius) 0 0 var(--radius);
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            font-size: 15px;
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .newsletter-btn {
-            padding: 0 25px;
-            background: linear-gradient(135deg, var(--accent), #FFC107);
-            color: var(--primary);
-            border: none;
-            border-radius: 0 var(--radius) var(--radius) 0;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .newsletter-btn:hover {
-            background: linear-gradient(135deg, #FFD700, #FFC107);
-        }
-
+   
         .copyright {
             text-align: center;
             padding-top: 40px;
@@ -1718,7 +1679,14 @@
             }
 
             .hero p {
-                font-size: 1.2rem;
+                 font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            line-height: 1.6;
+            margin-top: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
             }
 
             .hero-btns {
@@ -1901,7 +1869,7 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            color: white;
+            color: rgb(229, 183, 15);
             padding: 20px;
             top: 50%;
             transform: translateY(-50%);
@@ -1913,9 +1881,26 @@
         }
 
         .hero-content p {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
+            /* Bigger size for visibility */
+            font-weight: 800 !important;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+
+
+            /* Bolder font */
+            background: linear-gradient(90deg, #fefefe, #eaeaea, #ffffff);
+
+            -webkit-background-clip: text;
+    
+            /* Soft yellow-white for high contrast */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            /* Glow effect for readability */
             margin-bottom: 30px;
+            letter-spacing: 0.5px;
+            /* Slight spacing for polish */
+            line-height: 1.6;
         }
+
 
         .cta-button {
             padding: 12px 25px;
@@ -1939,7 +1924,7 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            color: var(--secondary);
+            color: black;
         }
 
         .hero p {
@@ -1977,7 +1962,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
-                <p>Future-proof logistics solutions powered by innovation</p>
+                <p style="color: white;">Future-proof logistics solutions powered by innovation</p>
             </div>
             <div class="services-grid" id="f">
                 <div class="service-card">
@@ -1991,7 +1976,7 @@
                         <p>We ensure smooth and efficient movement of goods across borders with end-to-end logistics
                             solutions.
                             From documentation to delivery, we handle every step with reliability and speed.</p>
-                        <!--  <a href="#" class="btn btn-secondary">Discover More</a>-->
+                        <a href="Freight.html" class="btn btn-secondary">Discover More</a>
                     </div>
                 </div>
 
@@ -2006,7 +1991,7 @@
                         <p>Our smart warehousing keeps your goods safe and organized.
                             Short-term or long-term we handle it all efficiently.
                             Boost your supply chain with real-time visibility and control.</p>
-                        <!-- <a href="#" class="btn btn-secondary">Discover More</a>-->
+                         <a href="warehouse.html" class="btn btn-secondary">Discover More</a>
                     </div>
                 </div>
 
@@ -2020,7 +2005,7 @@
                         <p>We simplify the customs process with speed and accuracy.
                             From documentation to duty handling — we manage it all.
                             Stay compliant, avoid delays, and clear shipments smoothly.</p>
-                        <!--<a href="#" class="btn btn-secondary">Discover More</a>-->
+                        <a href="CustumClerence.html" class="btn btn-secondary">Discover More</a>
                     </div>
                 </div>
 
@@ -2035,7 +2020,7 @@
                         <p>Scale smarter with our complete 3PL solutions.
                             We handle storage, packing, and shipping — so you can focus on growth.
                             Reliable, efficient, and fully integrated logistics support.</p>
-                        <!-- <a href="#" class="btn btn-secondary">Discover More</a> -->
+                         <a href="3pl.html" class="btn btn-secondary">Discover More</a> 
                     </div>
                 </div>
 
@@ -2051,7 +2036,7 @@
                         <p>We ensure smooth, on-time delivery right to your customer's door.
                             Enhance your customer experience with fast, trackable service.
                             The final mile made efficient, visible, and reliable.</p>
-                        <!-- <a href="#" class="btn btn-secondary">Discover More</a> -->
+                         <a href="LMD.html" class="btn btn-secondary">Discover More</a> 
                     </div>
                 </div>
 
@@ -2067,7 +2052,7 @@
                         <p>Our Supply Chain Management solutions are built to connect every part of your logistics
                             process from sourcing to final delivery. We ensure optimized operations, cost-efficiency,
                             and full visibility at every stage.</p>
-                        <!-- <a href="#" class="btn btn-secondary">Discover More</a>-->
+                         <a href="SCM.html" class="btn btn-secondary">Discover More</a>
                     </div>
 
                 </div>
@@ -2113,7 +2098,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Industries We Serve</h2>
-                <p>Tailored logistics solutions for specialized sectors</p>
+                <p style="color: white;">Tailored logistics solutions for specialized sectors</p>
             </div>
             <div class="industries-container">
                 <div class="industries-grid">
@@ -2401,7 +2386,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Get in Touch</h2>
-                <p>Connect with our logistics experts</p>
+                <p style="color: white;">Connect with our logistics experts</p>
             </div>
             <div class="contact-container">
                 <div class="contact-form">
@@ -2434,7 +2419,8 @@
                             <a href="https://wa.me/447448292733"" target=" _blank" class="contact-option">WhatsApp</a>
                             <a href="https://www.instagram.com/teamslogistics/" target="_blank"
                                 class="contact-option">Instagram</a>
-                            <a href="https://www.facebook.com/profile.php?id=61578875420545" target="_blank" class="contact-option">Facebook</a>
+                            <a href="https://www.facebook.com/profile.php?id=61578875420545" target="_blank"
+                                class="contact-option">Facebook</a>
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@teamslogistics.co.uk"
                                 target="_blank" class="contact-option">Email</a>
 
@@ -2717,35 +2703,35 @@
                         <h3>Contact Information</h3>
                         <div class="contact-detail">
                             <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <div class="contact-text">
+                            <div class="contact-text" style="color: white;">
                                 76 Heather Lane,West Drayton,United Kingdom,UB7 8AR
 
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fas fa-phone contact-icon"></i>
-                            <div class="contact-text">
-                                <a href="https://wa.me/447459829063">07459 829063</a>
+                            <div class="contact-text" >
+                                <a href="https://wa.me/447459829063" style="color: white;">07459829063</a>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fas fa-phone contact-icon"></i>
                             <div class="contact-text">
-                                <a href="https://wa.me/447448292733">0 7448 292733</a>
+                                <a href="https://wa.me/447448292733" style="color: white;">07448292733</a>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fas fa-envelope contact-icon"></i>
                             <div class="contact-text">
                                 <a
-                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@teamslogistics.co.uk">info@teamslogistics.co.uk</a>
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@teamslogistics.co.uk" style="color: white;">info@teamslogistics.co.uk</a>
 
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fas fa-clock contact-icon"></i>
                             <div class="contact-text">
-                                <strong>Hours:</strong> 24/7 Operations Center
+                                <strong style="color: white;">Hours:</stron style="color: white;"> 24/7 Operations Center
                             </div>
                         </div>
                     </div>
@@ -2760,8 +2746,283 @@
             </div>
         </div>
 
+<div class="floating-whatsapp">
+  <div class="whatsapp-button">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+      <path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
+    </svg>
+  </div>
+  <div class="chat-window">
+    <div class="chat-header">
+      <div class="chat-title">Teams Logistics Support</div>
+      <div class="chat-close">×</div>
+    </div>
+    <div class="chat-body">
+      <div class="chat-message">
+        <div class="agent-avatar">TL</div>
+        <div class="message-content" style="color: black;">How can I help you?</div>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" placeholder="Write your message..." class="chat-input">
+      <button class="send-button">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path fill="white" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+<style>
+    /* CSS */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
 
+.whatsapp-button {
+  width: 50px;
+  height: 50px;
+  background: #FFC107;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: bounce 2s infinite;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  animation: none;
+}
+
+.whatsapp-button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  animation: ripple 1.5s infinite;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 90vw;
+  max-width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #FFC107;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.chat-close {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 12px;
+  min-height: 80px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.chat-message {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.agent-avatar {
+  width: 28px;
+  height: 28px;
+  background: #FFC107;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.message-content {
+  background: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 18px;
+  max-width: 80%;
+  color: black;
+  font-size: 13px;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 13px;
+}
+
+.send-button {
+  width: 36px;
+  height: 36px;
+  background: #FFC107;
+  border: none;
+  border-radius: 50%;
+  margin-left: 8px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .floating-whatsapp {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .whatsapp-button {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .chat-window {
+    bottom: 55px;
+    width: 85vw;
+  }
+  
+  .chat-header {
+    padding: 10px;
+  }
+  
+  .chat-title {
+    font-size: 13px;
+  }
+  
+  .message-content {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .chat-input {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .send-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappButton = document.querySelector('.whatsapp-button');
+  const chatWindow = document.querySelector('.chat-window');
+  const closeButton = document.querySelector('.chat-close');
+  const sendButton = document.querySelector('.send-button');
+  const chatInput = document.querySelector('.chat-input');
+  
+  // Toggle chat window
+  whatsappButton.addEventListener('click', function() {
+    chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+  });
+  
+  // Close chat window
+  closeButton.addEventListener('click', function() {
+    chatWindow.style.display = 'none';
+  });
+  
+  // Send message (redirect to WhatsApp)
+  sendButton.addEventListener('click', function() {
+    if(chatInput.value.trim() !== '') {
+      const message = encodeURIComponent(chatInput.value);
+      window.open(`https://wa.me/447448292733?text=${message}`, '_blank');
+      chatInput.value = '';
+      chatWindow.style.display = 'none';
+    }
+  });
+  
+  // Also send on Enter key
+  chatInput.addEventListener('keypress', function(e) {
+    if(e.key === 'Enter') {
+      sendButton.click();
+    }
+  });
+});
+</script>
     </section>
+    <!-- تمام غیر ضروری اسکرپٹس کو ہٹا دیں -->
+<script src="unnecessary-plugin.js"></script> <!-- DELETE THIS -->
 
     <!-- Footer -->
     <footer>
@@ -2772,7 +3033,7 @@
                         <i class="fas fa-shipping-fast footer-logo-icon"></i>
                         <div class="footer-logo-text">Teams Logistics</div>
                     </div>
-                    <p>Your trusted partner for comprehensive logistics solutions, delivering excellence in freight
+                    <p style="color: white;">Your trusted partner for comprehensive logistics solutions, delivering excellence in freight
                         forwarding, warehousing, and supply chain management.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/teams-logistics-63337b376/" target="_blank">
@@ -2796,11 +3057,11 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#industries"><i class="fas fa-chevron-right"></i> Industries</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#home" style="color: white;"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about" style="color: white;"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#services" style="color: white;"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#industries" style="color: white;"><i class="fas fa-chevron-right"></i> Industries</a></li>
+                        <li><a href="#contact" style="color: white;"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
 
@@ -2808,19 +3069,19 @@
                 <div class="footer-col">
                     <h4>Our Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#f"><i class="fas fa-chevron-right"></i> Freight Forwarding</a></li>
-                        <li><a href="#w"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
-                        <li><a href="#c"><i class="fas fa-chevron-right"></i> Customs Clearance</a></li>
-                        <li><a href="#3pl"><i class="fas fa-chevron-right"></i> 3PL (Third-Party Logistics)</a>
+                        <li><a href="#f" style="color: white;"><i class="fas fa-chevron-right"></i> Freight Forwarding</a></li>
+                        <li><a href="#w" style="color: white;"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="#c" style="color: white;"><i class="fas fa-chevron-right"></i> Customs Clearance</a></li>
+                        <li><a href="#3pl" style="color: white;"><i class="fas fa-chevron-right"></i> 3PL (Third-Party Logistics)</a>
                         </li>
-                        <li><a href="#last"><i class="fas fa-chevron-right"></i> Last-Mile Delivery</a></li>
-                        <li><a href="#s"><i class="fas fa-chevron-right"></i> Supply Chain Management</a>
+                        <li><a href="#last" style="color: white;"><i class="fas fa-chevron-right"></i> Last-Mile Delivery</a></li>
+                        <li><a href="#s" style="color: white;"><i class="fas fa-chevron-right"></i> Supply Chain Management</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Team Logistics. All Rights Reserved. | <a href="https://www.team-spirits.co.uk/">Powered
+                <p style="color: white;">&copy; 2025 Team Logistics. All Rights Reserved. | <a href="https://www.team-spirits.co.uk/">Powered
                         by Team Spirit</a></p>
             </div>
         </div>
