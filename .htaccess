@@ -1,10 +1,14 @@
 RewriteEngine On
 
-# Remove .html extension
+# 1. Remove .html extension (silent mapping)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# Remove index.php/index.html from URL
-RewriteCond %{THE_REQUEST} /index\.(html|php) [NC]
-RewriteRule ^(.*?)index\.(html|php)$ /$1 [L,R=301,NC,NE]
+# 2. Redirect index.html#services to /services
+RewriteCond %{THE_REQUEST} /index\.html\#services [NC]
+RewriteRule ^ /services? [R=301,L,NE]
+
+# 3. Force clean URLs (remove .html completely)
+RewriteCond %{THE_REQUEST} \ /(.+)\.html [NC]
+RewriteRule ^ /%1 [R=301,L,NE]

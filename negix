@@ -1,0 +1,11 @@
+server {
+    # Remove .html extension
+    rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
+    
+    # Handle #services redirect
+    location = /index.html {
+        if ($args ~* "^#services") {
+            return 301 /services;
+        }
+    }
+}
