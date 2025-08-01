@@ -22,7 +22,7 @@
             --light: #1E1E1E;
             --dark: #0A0A0A;
             --gray: #B0B0B0;
-            --white: #FFFFFF;
+            --white: var(--gray);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --shadow: 0 4px 20px rgba(255, 193, 7, 0.25);
             --radius: 10px;
@@ -52,7 +52,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             line-height: 1.2;
-            color: var(--white);
+            color: var(--gray);
         }
 
         .container {
@@ -179,7 +179,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: var(--white);
+            color:  #afb5ba;";
             font-weight: 600;
             font-size: 15px;
             transition: var(--transition);
@@ -865,41 +865,6 @@
             transform: rotate(45deg);
         }
 
-        .newsletter-form {
-            display: flex;
-            margin-top: 30px;
-        }
-
-
-        .newsletter-input {
-            flex: 1;
-            padding: 15px 20px;
-            border: none;
-            border-radius: var(--radius) 0 0 var(--radius);
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            font-size: 15px;
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .newsletter-btn {
-            padding: 0 25px;
-            background: linear-gradient(135deg, var(--accent), #FFC107);
-            color: var(--primary);
-            border: none;
-            border-radius: 0 var(--radius) var(--radius) 0;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .newsletter-btn:hover {
-            background: linear-gradient(135deg, #FFD700, #FFC107);
-        }
 
         .copyright {
             text-align: center;
@@ -1213,114 +1178,7 @@
 
 
 
-    <style>
-        .hero {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .hero-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            opacity: 0.6;
-            /* Optional for dark overlay */
-        }
-
-        .hero {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .hero-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            opacity: 0.6;
-            /* Optional for dark overlay */
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
-            padding: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            padding: 12px 25px;
-            background-color: #FFD700;
-            color: #000;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #fff;
-            color: #000;
-        }
-
-
-
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: var(--primary);
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            border: 2px solid var(--secondary);
-        }
-
-        .cta-button:hover {
-            background-color: transparent;
-            color: var(--secondary);
-        }
-    </style>
+ 
     </section>
 
 
@@ -1329,8 +1187,8 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Us</h2>
-                <p style="color: white;">Streamlining Freight, Warehousing & Customs with Precision</p>
+                <h2 style="color: #afb5ba;">About Us</h2>
+                <p style="color: #afb5ba;">Streamlining Freight, Warehousing & Customs with Precision</p>
             </div>
 
             <div class="about-container" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
@@ -1342,10 +1200,10 @@
 
                 <!-- Right Content -->
                 <div class="about-content" style="flex: 1 1 55%;">
-                    <h3>Reliable Logistics for the Modern World</h3>
-                    <p style="color: white;"><strong style="color: white;">Team Logistics</strong> delivers efficient freight forwarding, secure warehousing, and
+                    <h3 style="color: #afb5ba;">Reliable Logistics for the Modern World</h3>
+                    <p style="color: #afb5ba;"><strong >Team Logistics</strong> delivers efficient freight forwarding, secure warehousing, and
                         smooth customs clearance through cutting-edge technology and experienced professionals.</p>
-                    <p style="color: white;">We aim to simplify global trade with transparent operations, timely deliveries, and sustainable
+                    <p style="color: #afb5ba;">We aim to simplify global trade with transparent operations, timely deliveries, and sustainable
                         practices.</p>
                 </div>
             </div>
@@ -1808,12 +1666,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="feature">
                         <i class="fas fa-ship feature-icon"></i>
                         <h4>Freight Forwarding</h4>
-                        <p>Efficient cargo movement across sea, air, and land</p>
+                        <p style="color: #afb5ba;">Efficient cargo movement across sea, air, and land</p>
                     </div>
                     <div class="feature">
                         <i class="fas fa-warehouse feature-icon"></i>
                         <h4>Smart Warehousing</h4>
-                        <p>Safe, scalable, and tech-enabled storage facilities</p>
+                        <p style="color: #afb5ba;">Safe, scalable, and tech-enabled storage facilities</p>
                     </div>
                 </div>
 
@@ -1822,12 +1680,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="feature">
                         <i class="fas fa-file-invoice feature-icon"></i>
                         <h4>Customs Clearance</h4>
-                        <p>Quick documentation and hassle-free border processes</p>
+                        <p style="color: #afb5ba;">Quick documentation and hassle-free border processes</p>
                     </div>
                     <div class="feature">
                         <i class="fas fa-project-diagram feature-icon"></i>
                         <h4>Supply Chain Management</h4>
-                        <p>Optimized supply chains for end-to-end visibility</p>
+                        <p style="color: #afb5ba;">Optimized supply chains for end-to-end visibility</p>
                     </div>
                 </div>
 
@@ -1836,18 +1694,62 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="feature">
                         <i class="fas fa-industry feature-icon"></i>
                         <h4>Last-Mile Delivery</h4>
-                        <p>Fast and accurate delivery at the customer’s doorstep</p>
+                        <p style="color: #afb5ba;">Fast and accurate delivery at the customer’s doorstep</p>
                     </div>
                     <div class="feature">
                         <i class="fas fa-network-wired feature-icon"></i>
                         <h4>3PL (Third-Party Logistics)</h4>
-                        <p>Flexible outsourcing solutions for logistics operations</p>
+                        <p style="color: #afb5ba;">Flexible outsourcing solutions for logistics operations</p>
                     </div>
                 </div>
             </div>
 
         </div>
         <style>
+            /* ✅ Desktop View Styles */
+@media (min-width: 769px) {
+    .features {
+        padding: 60px 80px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 30px;
+        width: 48%;
+ 
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        font-size: 36px;
+        margin-right: 20px;
+        color: #ffcc00;
+    }
+
+    .feature-content h4 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .feature-content p {
+        font-size: 1rem;
+        color: #666;
+    }
+}
+
             /* ✅ Mobile Responsive Fix */
             @media (max-width: 768px) {
                 .features {
@@ -1881,8 +1783,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <!--Director information-->
     <div class="director-profile-section">
         <div class="profile-header">
-            <h2>A Leader with Purpose</h2>
-            <p>Defining Tomorrow’s Logistics, Today</p>
+            <h2  style="color: #afb5ba;">A Leader with Purpose</h2>
+            <p  style="color: #afb5ba;">Defining Tomorrow’s Logistics, Today</p>
 
         </div>
 
@@ -1892,8 +1794,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
 
             <div class="director-info">
-                <h3>Usama Aslam</h3>
-                <p class="title">Director</p>
+                <h3  style="color: #afb5ba;">Usama Aslam</h3>
+                <p class="title"  style="color: #afb5ba;">Director</p>
 
                 <div class="social-links">
                     <a href="https://twitter.com/usama45411503" class="linkedin"><i class="fab fa-twitter"></i></a>
@@ -1912,19 +1814,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="details-grid">
                     <div class="detail-item">
                         <i class="fas fa-calendar-alt"></i>
-                        <span>July 1992</span>
+                        <span  style="color: #afb5ba;">July 1992</span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-flag"></i>
-                        <span>Pakistani</span>
+                        <span  style="color: #afb5ba;">Pakistani</span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>United Kingdom</span>
+                        <span  style="color: #afb5ba;">United Kingdom</span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-briefcase"></i>
-                        <span>Director</span>
+                        <span  style="color: #afb5ba;">Director</span>
                     </div>
                 </div>
 
@@ -2234,7 +2136,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <i class="fas fa-shipping-fast footer-logo-icon"></i>
                         <div class="footer-logo-text">Teams Logistics</div>
                     </div>
-                    <p style="color: white;">Your trusted partner for comprehensive logistics solutions, delivering excellence in freight
+                    <p  style="color: #afb5ba;">Your trusted partner for comprehensive logistics solutions, delivering excellence in freight
                         forwarding, warehousing, and supply chain management.
                     </p>
                     <div class="social-links">
@@ -2257,33 +2159,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4  style="color: #afb5ba;">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#home" style="color: white;"><i class="fas fa-chevron-right" "></i > Home</a></li>
-                        <li><a href="#about" style="color: white;"><i class="fas fa-chevron-right" ></i> About Us</a></li>
-                        <li><a href="#services" style="color: white;"><i class="fas fa-chevron-right" ></i> Services</a></li>
-                        <li><a href="#industries" style="color: white;"><i class="fas fa-chevron-right"></i> Industries</a></li>
-                        <li><a href="#contact" style="color: white;"><i class="fas fa-chevron-right" ></i> Contact</a></li>
+                        <li><a href="#home" ><i class="fas fa-chevron-right" "></i > Home</a></li>
+                        <li><a href="#about" ><i class="fas fa-chevron-right" ></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right" ></i> Services</a></li>
+                        <li><a href="#industries" ><i class="fas fa-chevron-right"></i> Industries</a></li>
+                        <li><a href="#contact" ><i class="fas fa-chevron-right" ></i> Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Our Services</h4>
+                    <h4  style="color: #afb5ba;">Our Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#f" style="color: white;"><i class="fas fa-chevron-right"></i> Freight Forwarding</a></li>
-                        <li><a href="#w" style="color: white;"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
-                        <li><a href="#c" style="color: white;"><i class="fas fa-chevron-right"></i> Customs Clearance</a></li>
-                        <li><a href="#3pl" style="color: white;"><i class="fas fa-chevron-right"></i> 3PL (Third-Party Logistics)</a>
+                        <li><a href="#f" ><i class="fas fa-chevron-right"></i> Freight Forwarding</a></li>
+                        <li><a href="#w" ><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="#c" ><i class="fas fa-chevron-right"></i> Customs Clearance</a></li>
+                        <li><a href="#3pl" ><i class="fas fa-chevron-right"></i> 3PL (Third-Party Logistics)</a>
                         </li>
-                        <li><a href="#last" style="color: white;"><i class="fas fa-chevron-right"></i> Last-Mile Delivery</a></li>
-                        <li><a href="#s" style="color: white;"><i class="fas fa-chevron-right"></i> Supply Chain Management</a>
+                        <li><a href="#last" ><i class="fas fa-chevron-right"></i> Last-Mile Delivery</a></li>
+                        <li><a href="#s" ><i class="fas fa-chevron-right"></i> Supply Chain Management</a>
                         </li>
                     </ul>
                 </div>
 
             </div>
             <div class="copyright">
-                <p style="color: white;" >&copy; 2025 Team Logistics. All Rights Reserved. | <a href="https://www.team-spirits.co.uk/">Powered
+                <p>&copy; 2025 Team Logistics. All Rights Reserved. | <a href="https://www.team-spirits.co.uk/">Powered
                         by Team Spirit</a></p>
             </div>
         </div>
