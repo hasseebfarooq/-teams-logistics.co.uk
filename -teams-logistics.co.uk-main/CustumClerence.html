@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Logistics</title>
+    <link rel="icon" type="image/x-icon" href="asset/images/l1.png" sizes="64x64">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --navy: #11110f;
+            --white: #fff;
+            --light: #F8F8F8;
+            --gray: #f8eeee;
+            --dark: #080808;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #f6f0f0;
+            background-color: rgb(0, 0, 0);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .main-header {
+            background: linear-gradient(rgba(62, 63, 64, 0.85), rgba(35, 35, 36, 0.85));
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .header-subtitle {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            line-height: 1.6;
+            margin-top: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .back-icon img {
+            width: 35px;
+            height: 35px;
+            filter: brightness(0) saturate(100%) invert(72%) sepia(91%) saturate(586%) hue-rotate(3deg) brightness(110%) contrast(104%);
+            transition: transform 0.3s ease;
+        }
+
+        .back-icon img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Freight Section */
+        .freight-section {
+            padding: 60px 0;
+            background-color: #1f1f1f;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .freight-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .freight-image {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            box-shadow: 0 30px 60px rgba(83, 82, 79, 0.3);
+            overflow: hidden;
+        }
+
+        .freight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFC107;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .benefit-icon {
+            background: #FFC107;
+            color: #000;
+            width: 65px;
+            height: 65px;
+            font-size: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .benefit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #FFC107;
+            margin-bottom: 10px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .benefit-list li {
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #f1f1f1;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .benefit-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 22px;
+            height: 22px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/190/190411.pn');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            background: var(--navy);
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-container p {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .benefit-list li {
+                padding-left: 28px;
+                font-size: 14px;
+            }
+
+            .benefit-list li::before {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Hero Section -->
+    <header class="main-header">
+        <img src="asset/images/fgg1.png" alt="Truck fleet" class="hero-image">
+        <div class="container">
+            <h1 class="header-title">Customs Clearance, Handled With Expertise</h1>
+            <p class="header-subtitle">100+ vehicles. 10+ years of expertise. We move cargo across Europe with speed,
+                safety, and absolute reliability.</p>
+            <a href="index.html" class="back-icon" title="Back to Home" style="color: #FFC107;">
+                <img src="https://cdn-icons-png.flaticon.com/512/318/318477.png" alt="Back" />
+            </a>
+        </div>
+    </header>
+
+    <!-- Freight Section -->
+<!-- Customs Clearance Section -->
+<section class="freight-section">
+    <div class="container">
+   <!--     <div class="section-header">
+            <h2 class="section-title">Customs Clearance</h2>
+            <p class="section-subtitle">Seamless border solutions for frictionless international trade</p>
+        </div>
+
+        <div class="freight-container">
+            <div class="freight-image">
+                <img src="asset/images/kk.png" alt="Customs Clearance Services">
+            </div>
+-->
+            <div class="freight-content">
+                <h3 class="content-title" style="color: #afb5ba;">Expert Border Crossing Solutions</h3>
+                <br>
+
+                <div class="benefits-grid">
+                    <!-- Documentation Expertise -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📄</div>
+                        <div>
+                            <h4 class="benefit-title">Documentation Mastery</h4>
+                            <ul class="benefit-list">
+                                <li>Comprehensive handling of all customs forms and declarations</li>
+                                <li>Precise tariff classification and duty optimization</li>
+                                <li>Specialized licenses and certificates processing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expedited Clearance -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div>
+                            <h4 class="benefit-title">Expedited Clearance</h4>
+                            <ul class="benefit-list">
+                                <li>Dedicated customs brokerage teams at all major borders</li>
+                                <li>Priority processing through trusted government channels</li>
+                                <li>Average 40% faster clearance than industry standards</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Global Compliance -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌐</div>
+                        <div>
+                            <h4 class="benefit-title">Global Compliance</h4>
+                            <ul class="benefit-list">
+                                <li>Real-time updates on changing international trade regulations</li>
+                                <li>Country-specific expertise for 50+ global markets</li>
+                                <li>Compliance audits to prevent costly delays or penalties</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Visibility & Tracking -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👁️</div>
+                        <div>
+                            <h4 class="benefit-title">End-to-End Visibility</h4>
+                            <ul class="benefit-list">
+                                <li>Live customs status updates through our digital platform</li>
+                                <li>Automated alerts for document requests or inspections</li>
+                                <li>24/7 access to clearance documentation and records</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="floating-whatsapp">
+  <div class="whatsapp-button">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+      <path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
+    </svg>
+  </div>
+  <div class="chat-window">
+    <div class="chat-header">
+      <div class="chat-title">Teams Logistics Support</div>
+      <div class="chat-close">×</div>
+    </div>
+    <div class="chat-body">
+      <div class="chat-message">
+        <div class="agent-avatar">TL</div>
+        <div class="message-content" style="color: black;">How can I help you?</div>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" placeholder="Write your message..." class="chat-input">
+      <button class="send-button">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path fill="white" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+<style>
+    /* CSS */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+.whatsapp-button {
+  width: 50px;
+  height: 50px;
+  background: #FFC107;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: bounce 2s infinite;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  animation: none;
+}
+
+.whatsapp-button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  animation: ripple 1.5s infinite;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 90vw;
+  max-width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #FFC107;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.chat-close {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 12px;
+  min-height: 80px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.chat-message {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.agent-avatar {
+  width: 28px;
+  height: 28px;
+  background: #FFC107;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.message-content {
+  background: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 18px;
+  max-width: 80%;
+  color: black;
+  font-size: 13px;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 13px;
+}
+
+.send-button {
+  width: 36px;
+  height: 36px;
+  background: #FFC107;
+  border: none;
+  border-radius: 50%;
+  margin-left: 8px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .floating-whatsapp {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .whatsapp-button {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .chat-window {
+    bottom: 55px;
+    width: 85vw;
+  }
+  
+  .chat-header {
+    padding: 10px;
+  }
+  
+  .chat-title {
+    font-size: 13px;
+  }
+  
+  .message-content {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .chat-input {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .send-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappButton = document.querySelector('.whatsapp-button');
+  const chatWindow = document.querySelector('.chat-window');
+  const closeButton = document.querySelector('.chat-close');
+  const sendButton = document.querySelector('.send-button');
+  const chatInput = document.querySelector('.chat-input');
+  
+  // Toggle chat window
+  whatsappButton.addEventListener('click', function() {
+    chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+  });
+  
+  // Close chat window
+  closeButton.addEventListener('click', function() {
+    chatWindow.style.display = 'none';
+  });
+  
+  // Send message (redirect to WhatsApp)
+  sendButton.addEventListener('click', function() {
+    if(chatInput.value.trim() !== '') {
+      const message = encodeURIComponent(chatInput.value);
+      window.open(`https://wa.me/447448292733?text=${message}`, '_blank');
+      chatInput.value = '';
+      chatWindow.style.display = 'none';
+    }
+  });
+  
+  // Also send on Enter key
+  chatInput.addEventListener('keypress', function(e) {
+    if(e.key === 'Enter') {
+      sendButton.click();
+    }
+  });
+});
+</script>
+<!-- تمام غیر ضروری اسکرپٹس کو ہٹا دیں -->
+<script src="unnecessary-plugin.js"></script> <!-- DELETE THIS -->
+</section>
+
+<style>
+    /* Add this to your existing CSS */
+    .benefit-list {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .benefit-list li {
+        position: relative;
+        padding-left: 36px;
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        color:  #afb5ba;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .benefit-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 22px;
+        height: 22px;
+        background-image: url('https://cdn-cons-png.flaticon.com/512/190/190411.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .benefit-icon {
+        background: #D4AF37;
+        color: #000;
+        width: 65px;
+        height: 65px;
+        font-size: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        transition: transform 0.3s ease;
+    }
+
+    .benefit-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .benefit-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #D4AF37;
+        margin-bottom: 10px;
+    }
+</style>
+
+    <!-- Stats Section -->
+    <section class="stats-container">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">10+</div>
+                    <p style="color: #afb5ba;">Years Experience</p>
+                </div>
+                <div>
+                    <div class="stat-number">100+</div>
+                    <p style="color: #afb5ba;">Modern Vehicles</p>
+                </div>
+                <div>
+                    <div class="stat-number">24/7</div>
+                    <p style="color: #afb5ba;">Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
